@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title> nth-child and nth-oftype </title>
+    <style type="text/css">
+        /* p:nth-of-type(2) {color:red;} */
+        /* p:nth-child(2) {color:red;} */
+        .n p:nth-of-type(3n+1) {color:red;}
+    </style>
+</head>
+<body>
+    <h1>nth-child and nth-oftype</h1>
+    <p>three-2</p>
+    <section>
+        <h1>number</h1>
+        <p>one</p>
+        <p>two</p>
+    </section>
+    <p>three</p>
+
+
+    <section class="n">
+        <h1>n</h1>
+        <p>balabala</p>
+        <p>balabala</p>
+        <p>balabala</p>
+        <p>balabala</p>
+        <p>balabala</p>
+        <p>balabala</p>
+    </section>
+    
+    <blockquote>
+        <a href="http://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/">The Difference Between :nth-child and :nth-of-type</a>
+    </blockquote>
+</body>
+</html>
