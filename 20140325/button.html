@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title> button </title>
+    <style type="text/css">
+    /*  button  */
+    .b-s, .b-m, .b-b {position:relative;text-decoration:none;font:14px Consolas, "Courier New", monospace;box-shadow:0 2px 4px #aaa;}
+    .b-s:before, .b-m:before, .b-b:before {content:"";left:50%;top:1px;display:block;position:absolute;background:-webkit-linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.2));}
+    .b-m span, .b-b span,  .b-b b {display:block;z-index:1;position:relative;}
+    .b-m {
+        border:1px solid #008e24;
+        display:block;
+        color:#132418;
+        text-align:center;
+        border-radius:20px;
+        width:143px;
+        height:38px;
+        background-image:-webkit-linear-gradient(left, #00c834, #2de072, #00c834);
+    }
+   .b-m::before {
+        height:18px;
+        width:136px;
+        margin-left:-68px;
+        border-top-left-radius:40px;
+        border-top-right-radius:40px;
+        border-bottom-right-radius:20px;
+        border-bottom-left-radius:20px;
+   }
+   .b-m span {padding-top:10px;}
+   .b-m-multi span {padding-top:1px;}
+   .b-m:hover {background:-webkit-linear-gradient(left, #039829, #17ce5a, #039829);}
+   .b-m:active {background:-webkit-linear-gradient(left, #17ce5a, #039829, #17ce5a);}
+
+   .b-s {
+        border:1px solid #2094a0;
+        border-radius:2px;
+        color:#2e1812;
+        font:bold 18px "黑体", "Microsoft Yahei";
+        padding:3px 30px;
+        background:-webkit-linear-gradient(left, #9ddee2, #e1f1f5, #9ddee2);
+    }
+    .b-s:before {
+        width:96px;
+        height:8px;
+        margin-left:-48px;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px;
+    }
+    .b-s span {position:relative;z-index:1;}
+    .b-s:hover {background:-webkit-linear-gradient(left, #81d8db, #bfe8ed, #81d8db);}
+    .b-s:active {background:-webkit-linear-gradient(left, #bfe8ed, #81d8db, #bfe8ed);}
+
+    .b-b {text-align:center;font-size:12px;color:#002a3b;display:block;width:120px;height:60px;border-width:1px;border-style:solid;border-radius:3px;}
+    .b-b b {padding-top:16px;}
+    .b-b:before {
+        width:118px;
+        height:20px;
+        margin-left:-59px;
+        border-bottom-right-radius:15px;
+        border-bottom-left-radius:15px;
+    }
+    .b-b:after {
+        content:"";left:50%;bottom:1px;display:block;position:absolute;
+        background:-webkit-linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.5));
+        width:118px;
+        height:10px;
+        margin-left:-59px;
+        border-top-right-radius:8px;
+        border-top-left-radius:8px;
+    }
+    /* 00C0F2 34D5F9 */
+    .b-b-blue {
+        border-color:#009bf2;
+        background:-webkit-linear-gradient(left, #00c0f2, #34d5f9, #00c0f2);
+    }
+    /* 94918c c4c1ba */
+    .b-b-gray {
+        border-color:#807d78;
+        background:-webkit-linear-gradient(left, #94918c, #c4c1ba, #94918c);
+    }
+    /* ff1e24 ff7b78 */
+    .b-b-red {
+        border-color:#f38c8a;
+        background:-webkit-linear-gradient(left, #ff1e24, #ff7b78, #ff1e24);
+    }
+    
+
+    .d {position:relative;display:block;width:130px;height:80px;color:#012429;font-size:12px;}
+    .d span {position:absolute;display:block;}
+    .d-diamond {
+        width:80px;height:40px;background-color:red;
+        left:50%;margin-left:-40px;
+        -webkit-transform:skew(-45deg);
+    }
+    </style>
+</head>
+<body>
+    
+    <a class="b-m b-m-multi" href="javascript:;">
+        <span>regapi.37.com</span>
+        <span>注册</span>
+    </a>
+    <a class="b-m" href="javascript:;">
+        <span>regapi.37.com</span>
+    </a>
+
+    <br />
+    <div>
+        <a class="b-s" href="javascript:;"><span>广州</span></a>
+    </div>
+    <br />
+
+    <a class="b-b b-b-gray" href="javascript:;">
+        <b>122.226.212.245</b>
+        <span>负载：0.9</span>
+    </a>
+    <br />
+    <a class="b-b b-b-red" href="javascript:;">
+        <b>122.226.212.245</b>
+        <span>负载：0.9</span>
+    </a>
+    <br />
+    <a class="b-b b-b-blue" href="javascript:;">
+        <b>122.226.212.245</b>
+        <span>负载：0.9</span>
+    </a>
+
+    <br />
+
+
+    <!-- diamand -->
+    <svg width="130" height="80">
+        <defs>
+            <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color:#ff7876;" />
+                <stop offset="100%" style="stop-color:#ff373c;" />
+            </radialGradient>
+        </defs>
+        <g>
+            <polygon points="0,40 65,0 130,40 65,80" fill="url(#grad1)" stroke="#994a49" />
+            <text style="font-size:12px;" x="20" y="45" fill="#012429">122.226.212.245</text>
+        </g>
+    </svg>
+
+    <svg width="130" height="80">
+        <defs>
+            <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color:#49d9f8;" />
+                <stop offset="100%" style="stop-color:#00c0f1;" />
+            </radialGradient>
+        </defs>
+        <g>
+            <radialGradient></radialGradient>
+            <polygon points="0,40 65,0 130,40 65,80" stroke="#496b80" fill="url(#grad2)" />
+            <text style="font-size:12px;" x="20" y="45" fill="#012429">122.226.212.245</text>
+        </g>
+    </svg>
+
+
+    <script type="text/javascript" src="http://ptres.37.com/js/sq/lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://ptres.37.com/js/sq/plugin/jquery-1.11.0.min.js"></script>
+</body>
+</html>

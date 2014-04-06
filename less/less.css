@@ -1,0 +1,50 @@
+html,
+body,
+div,
+ul,
+li,
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  color: #666666;
+  background-color: #eeeeee;
+  font: 1.4rem/1.5 "Microsoft Yahei", Simsun;
+}
+a {
+  color: #5b83ad;
+  text-decoration: none;
+}
+a:hover {
+  color: #6c94be;
+  text-decoration: underline;
+}
+header {
+  font-weight: bold;
+}
+header nav {
+  color: red;
+}
+header nav a {
+  color: red;
+}
+header nav a:hover {
+  color: #b30909;
+}
+header h1 {
+  background-color: #5b83ad;
+}
+.list strong {
+  color: #b30909;
+}
+.list span {
+  color: #ffa70e;
+}

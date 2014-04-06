@@ -1,0 +1,74 @@
+@color-base: #666;
+@color-highlight-deep: #b30909;
+@color-highlight-shallow: #ffa70e;
+@nice-blue: #5b83ad;
+@light-blue: @nice-blue + #111;
+@bgcolor-base: #eee;
+@font: "Microsoft Yahei", Simsun;
+
+// .highlight() 这种无参数的混入，不会编译到 css 中去，不会暴露
+.highlight(@type) when (@type = dark) {
+    color: @color-highlight-deep;
+}
+
+.highlight(@type) when (@type = shallow) {
+    color: @color-highlight-shallow;
+}
+
+
+
+html, body, div, ul, li, p, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: @color-base;
+    background-color: @bgcolor-base;
+    font: 1.4rem/1.5 @font;
+}
+
+a {
+    color: @nice-blue;
+    text-decoration: none;
+    &:hover {
+        color: @light-blue;
+        text-decoration: underline;
+    }
+}
+
+
+header {
+    font-weight: bold;
+    nav {
+        color:red;
+        a {
+            color:red;
+            &:hover {
+                .highlight( dark );
+            }
+        }
+    }
+
+    h1 {
+        background-color: @nice-blue;
+    }
+}
+
+
+
+
+.list strong {
+    .highlight( dark );
+}
+.list span {
+    .highlight( shallow );
+}

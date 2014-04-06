@@ -1,0 +1,27 @@
+html, div, body, p, h1, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+$font-stack: "Microsoft Yahei", SimSun, Helvetica, sans-serif;
+
+
+html {
+    font-size: 10px;
+}
+body {
+    font: 1.4em/1.5 $font-stack;
+}
+
+div {
+    color:#000;
+}
+
+table {
+    width: 100%;
+}
+
