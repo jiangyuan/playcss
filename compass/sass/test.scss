@@ -1,0 +1,30 @@
+$red: #f00;
+
+// placeholder is good
+%red {
+    color: #f00;
+}
+
+div {
+    @extend %red;
+}
+
+p {
+    @extend %red;
+}
+
+span {
+    @extend %red;
+}
+
+div {
+     color: $red;
+}
+
+p {
+    color: $red;
+}
+
+span {
+    color: $red;
+}

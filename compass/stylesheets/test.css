@@ -1,0 +1,19 @@
+/* line 4, E:/Github/playcss/compass/sass/test.scss */
+div, p, span {
+  color: #f00;
+}
+
+/* line 20, E:/Github/playcss/compass/sass/test.scss */
+div {
+  color: red;
+}
+
+/* line 24, E:/Github/playcss/compass/sass/test.scss */
+p {
+  color: red;
+}
+
+/* line 28, E:/Github/playcss/compass/sass/test.scss */
+span {
+  color: red;
+}
