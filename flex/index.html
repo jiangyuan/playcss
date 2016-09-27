@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /*
+
+         */
+
+
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+        }
+
+        .face {
+            margin: 16px;
+            padding: 4px;
+            background-color: #e7e7e7;
+            width: 104px;
+            height: 104px;
+            object-fit: contain;
+            box-shadow: inset 0 5px white, inset 0 -5px #bbb, inset 5px 0 #d7d7d7, inset -5px 0 #d7d7d7;
+            border-radius: 10%;
+        }
+
+        .pip {
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin: 4px;
+            background-color: #333;
+            box-shadow: inset 0 3px #111, inset 0 -3px #555;
+        }
+
+        .one {
+            display: flex;
+            justify-content: center;  /* item 在主轴上的对齐方式 */
+            align-items: center; /* item 在交叉轴 */
+        }
+
+        .two {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /*.two .pip:nth-child(2) {
+            align-self: flex-end;
+        }*/
+
+        .three {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .three .pip:nth-child(2) {
+            align-self: center
+        }
+
+        .three .pip:nth-child(3) {
+            align-self: flex-end
+        }
+
+        .four {
+            display: flex;
+            flex-wrap: wrap;
+            /*justify-content: flex-end;*/
+        }
+
+        .four .row {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .five {
+            display: flex;
+            flex-wrap: wrap;
+            /*justify-content: flex-end;*/
+        }
+
+        .five .row {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .five .row:nth-child(2) {
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="face one">
+        <span class="pip"></span>
+    </div>
+
+    <div class="face two">
+        <span class="pip"></span>
+        <span class="pip"></span>
+    </div>
+
+    <div class="face three">
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+    </div>
+
+    <div class="face four">
+        <div class="row">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </div>
+        <div class="row">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </div>
+    </div>
+
+    <div class="face five">
+        <div class="row">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </div>
+        <div class="row">
+            <span class="pip"></span>
+        </div>
+        <div class="row">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </div>
+    </div>
+</body>
+
+</html>
