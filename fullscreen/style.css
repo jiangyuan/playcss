@@ -1,0 +1,30 @@
+body, div, header {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    /*position: relative;*/
+    height: 100%;
+}
+
+.first {
+    height: 100%;
+    /*position: relative;*/
+}
+
+.banner {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+header {
+    height: 50px;
+}
+
+.banner {
+    background-color: rgba(0, 0, 0, 0.5);
+}
